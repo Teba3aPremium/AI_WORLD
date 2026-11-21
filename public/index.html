@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI World | اكتشف عالم الذكاء الاصطناعي</title>
+<meta name="description" content="منصة عربية مبسطة للتعرف على الذكاء الاصطناعي وتجربة مساعد ذكي تفاعلي.">
+<style>
+:root{--bg:#080d20;--panel:#111a35;--panel2:#172344;--cyan:#55d7ee;--purple:#9c8cff;--white:#f6f8ff;--muted:#aab5d1;--line:#263457;--yellow:#ffcf5a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 75% 0%,#1b2a56 0,transparent 38%),var(--bg);color:var(--white);font-family:Tahoma,Arial,sans-serif;line-height:1.8}
+a{color:inherit;text-decoration:none}.container{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#080d20eF;backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}.logo{font-size:22px;font-weight:900;letter-spacing:.3px}.logo b{color:var(--cyan)}.links{display:flex;gap:24px;color:var(--muted);font-size:14px}.links a:hover{color:var(--cyan)}
+.btn{border:0;cursor:pointer;border-radius:12px;padding:12px 19px;font:inherit;font-weight:bold;background:linear-gradient(100deg,var(--cyan),#8aa9ff);color:#081126;display:inline-flex;align-items:center;justify-content:center;gap:8px}.btn.secondary{background:#202d52;color:var(--white);border:1px solid #35466e}
+.hero{padding:88px 0 76px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:50px}.tag{display:inline-block;padding:6px 13px;border:1px solid #3b5681;background:#132344;color:var(--cyan);border-radius:30px;font-size:13px}.hero h1{font-size:clamp(37px,5vw,65px);line-height:1.25;margin:18px 0}.hero h1 span{background:linear-gradient(90deg,var(--cyan),var(--purple));background-clip:text;color:transparent}.hero p{font-size:17px;color:var(--muted);max-width:650px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
+.orbit{height:350px;display:grid;place-items:center;position:relative}.core{width:190px;height:190px;border-radius:50%;display:grid;place-items:center;font-size:72px;background:radial-gradient(circle at 35% 25%,#364f89,#111a38 68%);border:1px solid #6273b4;box-shadow:0 0 70px #5a82ff55, inset 0 0 35px #5ad7ee22;z-index:2}.ring{position:absolute;width:310px;height:310px;border:1px solid #3b5681;border-radius:50%;animation:spin 22s linear infinite}.ring:before,.ring:after{content:"";position:absolute;width:14px;height:14px;border-radius:50%;background:var(--cyan);box-shadow:0 0 20px var(--cyan)}.ring:before{top:45px;left:40px}.ring:after{bottom:42px;right:35px;background:var(--purple);box-shadow:0 0 20px var(--purple)}@keyframes spin{to{transform:rotate(360deg)}}.float{position:absolute;background:#152344;border:1px solid #35466e;padding:9px 14px;border-radius:12px;color:#dce8ff;font-size:13px}.f1{top:24px;right:0}.f2{bottom:35px;left:0}.f3{bottom:3px;right:38%}
+section{padding:66px 0}.section-head{text-align:center;margin-bottom:35px}.section-head .mini{color:var(--cyan);font-weight:bold;font-size:13px}.section-head h2{font-size:clamp(27px,3vw,39px);margin:7px 0}.section-head p{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:linear-gradient(145deg,#162344,#10182f);border:1px solid var(--line);border-radius:19px;padding:23px;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#5375b4}.ico{width:48px;height:48px;border-radius:14px;background:#20345c;display:grid;place-items:center;font-size:24px;margin-bottom:15px}.card h3{margin:0 0 8px}.card p{color:var(--muted);font-size:14px;margin:0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:20px}.feature{background:#111a35;border:1px solid var(--line);border-radius:20px;padding:27px}.feature h3{margin-top:0}.feature li{margin:9px 0;color:var(--muted)}.good{color:#70e3b0}.warn{color:#ffbd75}
+.chat-section{background:linear-gradient(180deg,transparent,#101a36 30%,#101a36 75%,transparent)}.chatbox{max-width:850px;margin:auto;border:1px solid #34466e;border-radius:22px;overflow:hidden;background:#0d1530;box-shadow:0 20px 70px #0005}.chat-top{padding:17px 20px;background:#172344;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px}.avatar{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--cyan),var(--purple));display:grid;place-items:center;color:#081126;font-size:22px}.chat-top small{display:block;color:#8de9c4;font-size:12px}.chat-top strong{font-size:16px}.messages{height:360px;overflow:auto;padding:20px;display:flex;flex-direction:column;gap:13px}.msg{max-width:83%;padding:12px 15px;border-radius:15px;font-size:14px;white-space:pre-wrap}.bot{background:#1a294c;border:1px solid #2b406a;align-self:flex-start;border-top-right-radius:4px}.user{background:linear-gradient(120deg,#286c91,#4c64a4);align-self:flex-end;border-top-left-radius:4px}.typing{color:var(--muted);font-size:12px;padding:0 20px 8px;display:none}.chat-form{padding:15px;border-top:1px solid var(--line);display:flex;gap:10px}.chat-form input{min-width:0;flex:1;border:1px solid #34466e;background:#111d3b;color:white;padding:13px 15px;border-radius:12px;font:inherit;outline:none}.chat-form input:focus{border-color:var(--cyan)}.chat-note{text-align:center;color:#8491b2;font-size:11px;padding:0 15px 14px}
+footer{border-top:1px solid var(--line);padding:25px 0;color:#8491b2;font-size:13px;text-align:center}
+@media(max-width:800px){.hero{grid-template-columns:1fr;text-align:center;padding:60px 0}.hero p{margin:auto}.hero-actions{justify-content:center}.orbit{height:290px}.ring{width:250px;height:250px}.core{width:150px;height:150px;font-size:58px}.grid{grid-template-columns:1fr 1fr}.links{gap:12px}.links a:nth-child(2),.links a:nth-child(3){display:none}}
+@media(max-width:540px){.grid,.split{grid-template-columns:1fr}.nav{height:65px}.links{font-size:12px}.hero h1{font-size:39px}.messages{height:340px}.msg{max-width:94%}.chat-form{gap:7px}.chat-form .btn{padding:10px 13px}}
+</style>
+</head>
+<body>
+<header><div class="container nav"><a class="logo" href="#"><b>AI</b> WORLD ✦</a><nav class="links"><a href="#about">عن AI</a><a href="#uses">التطبيقات</a><a href="#ethics">الفوائد والتحديات</a><a href="#chat">جرّب المساعد</a></nav><a class="btn secondary" href="#chat">ابدأ المحادثة</a></div></header>
+<main>
+<div class="container hero">
+ <div><span class="tag">✦ بوابتك إلى عالم المستقبل</span><h1>اكتشف قوة <span>الذكاء الاصطناعي</span></h1><p>افهم كيف تتعلم الآلات، واكتشف استخدامات الذكاء الاصطناعي في حياتنا، وجرّب بنفسك التحدث مع مساعد ذكي يجيب عن أسئلتك.</p><div class="hero-actions"><a class="btn" href="#chat">تحدث مع AI الآن ←</a><a class="btn secondary" href="#about">اكتشف المزيد</a></div></div>
+ <div class="orbit"><div class="ring"></div><div class="core">✧</div><div class="float f1">🧠 تعلم الآلة</div><div class="float f2">⚡ أفكار ذكية</div><div class="float f3">🌐 المستقبل</div></div>
+</div>
+<section id="about"><div class="container"><div class="section-head"><div class="mini">01 — المفهوم</div><h2>ما هو الذكاء الاصطناعي؟</h2><p>ببساطة: جعل الأنظمة قادرة على أداء مهام تحتاج عادةً إلى قدرات بشرية.</p></div><div class="grid">
+ <article class="card"><div class="ico">🧠</div><h3>التعلم من البيانات</h3><p>تتعرف الأنظمة على الأنماط من أمثلة وبيانات، ثم تستخدم ما تعلمته لإجراء تنبؤات أو تصنيفات.</p></article>
+ <article class="card"><div class="ico">💬</div><h3>فهم اللغة وتوليدها</h3><p>يمكن للنماذج اللغوية تحليل النصوص والإجابة عن الأسئلة وتلخيص المعلومات وكتابة المحتوى.</p></article>
+ <article class="card"><div class="ico">👁️</div><h3>تحليل الصور والصوت</h3><p>تستطيع بعض الأنظمة التعرف على عناصر الصور، وتحويل الكلام إلى نص، أو فهم الإشارات الصوتية.</p></article>
+ </div></div></section>
+<section id="uses"><div class="container"><div class="section-head"><div class="mini">02 — في حياتنا</div><h2>أين نستخدم الذكاء الاصطناعي؟</h2><p>أصبح جزءًا من أدوات وخدمات كثيرة حولنا.</p></div><div class="grid">
+ <article class="card"><div class="ico">🏥</div><h3>الصحة والطب</h3><p>المساعدة في تحليل الصور الطبية، وتنظيم المعلومات، ودعم الأبحاث الطبية.</p></article>
+ <article class="card"><div class="ico">🎓</div><h3>التعليم</h3><p>شرح المفاهيم، وتوليد تدريبات، وتقديم مسارات تعلم تناسب احتياجات المتعلم.</p></article>
+ <article class="card"><div class="ico">🚗</div><h3>النقل</h3><p>تحليل حركة المرور، وتحسين المسارات، ودعم أنظمة مساعدة السائق.</p></article>
+ <article class="card"><div class="ico">🏭</div><h3>الصناعة</h3><p>فحص جودة المنتجات، والتنبؤ بأعطال المعدات، وتحسين عمليات الإنتاج.</p></article>
+ <article class="card"><div class="ico">💳</div><h3>المال والأعمال</h3><p>رصد الأنماط غير المعتادة، وتحليل البيانات، وتحسين خدمة العملاء.</p></article>
+ <article class="card"><div class="ico">🎨</div><h3>الإبداع والإعلام</h3><p>المساعدة في توليد الأفكار والصور والمسودات، مع ضرورة احترام حقوق الملكية.</p></article>
+ </div></div></section>
+<section id="ethics"><div class="container"><div class="section-head"><div class="mini">03 — التفكير النقدي</div><h2>الفوائد والتحديات والمسؤولية</h2><p>الذكاء الاصطناعي أداة قوية، لكن استخدامه يحتاج وعيًا وتحققًا.</p></div><div class="split">
+ <div class="feature"><h3 class="good">✓ فرص وفوائد</h3><ul><li>تسريع بعض المهام المتكررة وتحليل كميات كبيرة من البيانات.</li><li>تسهيل الوصول إلى المعلومات ودعم التعلم والإبداع.</li><li>المساعدة في اكتشاف الأنماط وتوليد بدائل وأفكار جديدة.</li><li>تحسين بعض الخدمات عند استخدامه بطريقة مناسبة.</li></ul></div>
+ <div class="feature"><h3 class="warn">! تحديات يجب الانتباه لها</h3><ul><li>قد يقدم معلومات غير دقيقة بثقة؛ لذلك يجب التحقق من المصادر.</li><li>الخصوصية وحماية البيانات الشخصية.</li><li>التحيز في البيانات أو النتائج وعدم العدالة.</li><li>حقوق النشر، والشفافية، وتأثيره على بعض الوظائف.</li></ul></div>
+ </div><div class="hint" style="margin-top:18px;padding:16px;border-radius:12px;background:#172344;border-right:4px solid var(--cyan);color:#dce7ff">قاعدة مهمة: استخدم AI كمساعد للتفكير والتعلم، وليس بديلًا عن عقلك أو عن التحقق من الأدلة.</div></div></section>
+<section id="chat" class="chat-section"><div class="container"><div class="section-head"><div class="mini">04 — التجربة العملية</div><h2>قابل مساعدك الذكي</h2><p>اسأله عن الذكاء الاصطناعي أو الدراسة أو التكنولوجيا أو أي موضوع آخر.</p></div>
+ <div class="chatbox"><div class="chat-top"><div class="avatar">✧</div><div><strong>AI Assistant</strong><small>● جاهز للمحادثة</small></div></div>
+ <div class="messages" id="messages"><div class="msg bot">أهلًا بيك! 👋 أنا مساعد AI داخل موقع AI World.\nاسألني عن الذكاء الاصطناعي أو أي موضوع تحب تفهمه، وهحاول أساعدك.</div></div>
+ <div class="typing" id="typing">المساعد يكتب الآن...</div>
+ <form class="chat-form" id="chatForm"><input id="prompt" autocomplete="off" placeholder="اكتب سؤالك هنا..." required><button class="btn" type="submit">إرسال ➤</button></form><div class="chat-note">المحادثة تحتاج اتصالًا بخادم الموقع ومفتاح API صالحًا لتعمل بإجابات الذكاء الاصطناعي الحقيقية.</div>
+ </div></div></section>
+</main><footer><div class="container">AI WORLD ✦ منصة تعليمية للتعرف على الذكاء الاصطناعي — صُممت للتعلم والاستكشاف</div></footer>
+<script>
+const form=document.getElementById('chatForm'),input=document.getElementById('prompt'),messages=document.getElementById('messages'),typing=document.getElementById('typing');
+let history=[];
+function addMessage(text,who){const div=document.createElement('div');div.className='msg '+who;div.textContent=text;messages.appendChild(div);messages.scrollTop=messages.scrollHeight}
+form.addEventListener('submit',async e=>{e.preventDefault();const text=input.value.trim();if(!text)return;addMessage(text,'user');input.value='';history.push({role:'user',content:text});typing.style.display='block';
+ try{const res=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:history})});const data=await res.json();if(!res.ok)throw new Error(data.error||'تعذر الاتصال بالمساعد');const answer=data.reply||'لم يصل رد من النموذج.';addMessage(answer,'bot');history.push({role:'assistant',content:answer})}
+ catch(err){addMessage('لم أتمكن من الاتصال بالمساعد الآن. '+err.message+'\nتأكد من تشغيل الخادم وإعداد مفتاح API.','bot');history.pop()}
+ finally{typing.style.display='none'}
+});
+</script>
+</body></html>
